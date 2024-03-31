@@ -1,0 +1,37 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: Данный уровень эмитирует взаимодействие с удаленным сетевым узлом через
+    канал с помехами
+  title: Канальный уровень
+  version: "1.0"
+paths:
+  /code:
+    post:
+      consumes:
+      - application/json
+      description: Эмитирует взаимодействие с удаленным сетевым узлом через канал
+        с помехами, теряет сообщение с вероятностью 1% и использует циклический код[7,
+        4]
+      parameters:
+      - description: сегмент данных
+        in: body
+        name: user
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema: {}
+      summary: Канальный уровень
+      tags:
+      - DataLink
+schemes:
+- http
+swagger: "2.0"

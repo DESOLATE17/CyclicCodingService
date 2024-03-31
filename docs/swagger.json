@@ -1,0 +1,51 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "Данный уровень эмитирует взаимодействие с удаленным сетевым узлом через канал с помехами",
+        "title": "Канальный уровень",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/code": {
+            "post": {
+                "description": "Эмитирует взаимодействие с удаленным сетевым узлом через канал с помехами, теряет сообщение с вероятностью 1% и использует циклический код[7, 4]",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "DataLink"
+                ],
+                "summary": "Канальный уровень",
+                "parameters": [
+                    {
+                        "description": "сегмент данных",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {}
+                    }
+                }
+            }
+        }
+    }
+}
