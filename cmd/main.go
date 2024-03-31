@@ -6,6 +6,13 @@ import (
 	"time"
 )
 
+// @title Канальный уровень
+// @version 1.0
+// @description Данный уровень эмитирует взаимодействие с удаленным сетевым узлом через канал с помехами
+
+// @host localhost:8080
+// @schemes http
+// @BasePath /
 func main() {
 	logger := logrus.New()
 	formatter := &logrus.TextFormatter{
