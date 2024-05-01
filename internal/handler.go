@@ -42,7 +42,7 @@ func (h *Handler) InitRouter() *gin.Engine {
 // @Tags         DataLink
 // @Accept       json
 // @Produce      json
-// @Param        user  body  string  true  "сегмент данных"
+// @Param        user  body  models.Data  true  "сегмент данных"
 // @Success      200
 // @Failure      400  {object}  error
 // @Router       /code [post]

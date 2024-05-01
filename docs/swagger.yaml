@@ -1,4 +1,18 @@
 basePath: /
+definitions:
+  models.Data:
+    properties:
+      id:
+        type: integer
+      message:
+        items:
+          type: integer
+        type: array
+      numOfSegment:
+        type: integer
+      totalSegments:
+        type: integer
+    type: object
 host: localhost:8080
 info:
   contact: {}
@@ -20,7 +34,7 @@ paths:
         name: user
         required: true
         schema:
-          type: string
+          $ref: '#/definitions/models.Data'
       produces:
       - application/json
       responses:

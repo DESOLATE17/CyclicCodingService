@@ -35,7 +35,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "$ref": "#/definitions/models.Data"
                         }
                     }
                 ],
@@ -47,6 +47,28 @@ const docTemplate = `{
                         "description": "Bad Request",
                         "schema": {}
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.Data": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "message": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "numOfSegment": {
+                    "type": "integer"
+                },
+                "totalSegments": {
+                    "type": "integer"
                 }
             }
         }
