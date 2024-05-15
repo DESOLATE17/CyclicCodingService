@@ -43,7 +43,7 @@ func (h *Handler) InitRouter() *gin.Engine {
 // @Accept       json
 // @Produce      json
 // @Param        user  body  models.Data  true  "сегмент данных"
-// @Success      200
+// @Success      200  {object} models.Data
 // @Failure      400  {object}  error
 // @Router       /code [post]
 func (h *Handler) DataLink(context *gin.Context) {
