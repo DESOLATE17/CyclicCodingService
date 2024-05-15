@@ -58,17 +58,23 @@ const docTemplate = `{
         "models.Data": {
             "type": "object",
             "properties": {
-                "id": {
-                    "type": "integer"
-                },
                 "message": {
                     "type": "array",
                     "items": {
                         "type": "integer"
                     }
                 },
+                "messageId": {
+                    "type": "integer"
+                },
                 "numOfSegment": {
                     "type": "integer"
+                },
+                "sendDate": {
+                    "type": "string"
+                },
+                "sender": {
+                    "type": "string"
                 },
                 "totalSegments": {
                     "type": "integer"

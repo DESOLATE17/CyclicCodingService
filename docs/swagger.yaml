@@ -2,14 +2,18 @@ basePath: /
 definitions:
   models.Data:
     properties:
-      id:
-        type: integer
       message:
         items:
           type: integer
         type: array
+      messageId:
+        type: integer
       numOfSegment:
         type: integer
+      sendDate:
+        type: string
+      sender:
+        type: string
       totalSegments:
         type: integer
     type: object
